@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".Login">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@drawable/part4_backgroundwhite"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="166dp"
+                android:layout_height="144dp"
+                android:src="@drawable/logo"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="139dp"
+                tools:layout_editor_absoluteY="92dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="306dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELAMAT DATANG"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Silahkan Login Untuk Melanjutkan"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-light">
+            </TextView>
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="350dp"
+                android:hint="Email"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:layout_marginTop="25dp">
+            </EditText>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:drawableLeft="@drawable/ic_passwor"
+                android:drawablePadding="10dp"
+                android:layout_marginTop="20dp">
+
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="123dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/buttonstylekecil"
+                android:drawableRight="@drawable/ic_send"
+                android:shadowColor=""
+                android:text="Login"
+                android:textColor="@color/colorPrimaryDark">
+            </Button>
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum Punya Akun? Register Sekarang!"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="50dp">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

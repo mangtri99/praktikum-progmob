@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellow"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@drawable/part4_backgroundwhite"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="166dp"
+                android:layout_height="144dp"
+                android:src="@drawable/logo">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="347dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="REGISTER"
+                android:textStyle="bold"
+                android:textSize="25sp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/reg_nama"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:hint="Nama">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/reg_email"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:hint="Email"></EditText>
+
+            <EditText
+                android:id="@+id/reg_password"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_passwor"
+                android:drawablePadding="10dp"
+                android:hint="Password"></EditText>
+
+            <EditText
+                android:id="@+id/reg_password2"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_passwor"
+                android:drawablePadding="10dp"
+                android:hint="Konfirm Password"></EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="123dp"
+                android:layout_marginBottom="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_btn"
+                android:shadowColor="#000000"
+                android:shadowRadius=""
+                android:text="Register"
+                android:textColor="@color/colorPrimaryDark">
+            </Button>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
