@@ -49,7 +49,7 @@ public class Register extends AppCompatActivity {
         reg_password = (EditText) findViewById(R.id.reg_password);
         reg_password2 = (EditText) findViewById(R.id.reg_password2);
         btn_register = (Button) findViewById(R.id.btn_register);
-        text_login = (TextView) findViewById(R.id.text_register);
+        text_login = (TextView) findViewById(R.id.text_login);
 
 
         btn_register.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +57,13 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
                 requestRegister();
+            }
+        });
+
+        text_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mContext, Login.class));
             }
         });
     }
