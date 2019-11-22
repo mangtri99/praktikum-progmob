@@ -131,7 +131,7 @@ public class Login extends AppCompatActivity {
                                     JSONObject jsonRESULTS = new JSONObject(response.body().string());
                                     if (jsonRESULTS.getString("status").equals("success")) {
                                         // Jika login berhasil maka data nama yang ada di response API
-                                        // akan diparsing ke activity selanjutnya.
+                                         // akan diparsing ke activity selanjutnya.
 
                                         String name = jsonRESULTS.getJSONObject("data").getString("token");
                                         Log.d("wanjay", "onResponse: "+name);
