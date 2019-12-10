@@ -42,7 +42,7 @@
                     android:id="@+id/textlogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SELAMAT DATANG"
+                    android:text="LOGIN ADMIN"
                     android:textSize="25sp"
                     android:fontFamily="sans-serif"
                     android:textStyle="bold">
@@ -59,7 +59,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/email"
+                    android:id="@+id/email_admin"
                     android:layout_width="350dp"
                     android:hint="Email"
                     android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                 </EditText>
 
                 <EditText
-                    android:id="@+id/password"
+                    android:id="@+id/password_admin"
                     android:inputType="textPassword"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btn_login"
+                    android:id="@+id/btn_login_admin"
                     android:layout_width="123dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -98,23 +98,12 @@
                     android:textColor="@color/colorPrimaryDark">
                 </Button>
                 <TextView
-                    android:id="@+id/text_admin"
+                    android:id="@+id/text_user"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Login As Admin"
+                    android:text="Login As User"
                     android:textStyle="bold"
                     android:layout_marginBottom="10dp">
-
-                </TextView>
-                <TextView
-                    android:id="@+id/text_register"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Belum Punya Akun? Register Sekarang!"
-                    android:clickable="true"
-                    android:textSize="14sp"
-                    android:fontFamily="sans-serif-medium"
-                    android:layout_marginBottom="50dp">
 
                 </TextView>
 

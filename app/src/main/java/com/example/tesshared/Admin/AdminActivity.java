@@ -1,24 +1,22 @@
-package com.example.tesshared;
+package com.example.tesshared.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.tesshared.Login;
+import com.example.tesshared.R;
 
-
-public class MainActivity extends AppCompatActivity {
+public class AdminActivity extends AppCompatActivity {
 
     TextView result_name;
     String resultName;
-
     Button btn_logout;
 
     SharedPreferences sharedPreferences;
@@ -29,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
     public final static String TAG_TOKEN = "token";
     public final static Integer TAG_ID = 0;
     public final static Integer TAG_ADMIN = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_admin);
+
         sharedPreferences = this.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE);
         session = sharedPreferences.getBoolean(SESSION_STATUS, false);
         token = sharedPreferences.getString(TAG_TOKEN, null);
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.remove(String.valueOf(TAG_ID));
                 editor.remove(String.valueOf(TAG_ADMIN));
                 editor.apply();
-                startActivity(new Intent(getBaseContext(),Login.class));
+                startActivity(new Intent(getBaseContext(), Login.class));
                 finish();
             }
         });
@@ -67,3 +67,4 @@ public class MainActivity extends AppCompatActivity {
         result_name = (TextView) findViewById(R.id.result_name);
     }
 }
+
