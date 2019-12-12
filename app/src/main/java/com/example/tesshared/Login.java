@@ -22,6 +22,7 @@ import com.example.tesshared.Admin.AdminActivity;
 import com.example.tesshared.Admin.AdminLoginActivity;
 import com.example.tesshared.ApiHelper.BaseApiHelper;
 import com.example.tesshared.ApiHelper.UtilsApi;
+import com.example.tesshared.ui.home.HomeFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -64,7 +65,7 @@ public class Login extends AppCompatActivity {
         id_user = sharedPreferences.getInt(String.valueOf(TAG_ID),0);
         admin = sharedPreferences.getInt(String.valueOf(TAG_ADMIN),0);
         if (admin==2){
-            Intent intent = new Intent(Login.this, MainActivity.class);
+            Intent intent = new Intent(Login.this, Menu.class);
             intent.putExtra(TAG_TOKEN, token);
             intent.putExtra(String.valueOf(TAG_ADMIN),admin);
             intent.putExtra(String.valueOf(TAG_ID),id_user);
@@ -113,44 +114,6 @@ public class Login extends AppCompatActivity {
     }
 
 
-    private void requestLogin() {
-        mApiService.loginRequest(email.getText().toString(), password.getText().toString())
-                .enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        if (response.isSuccessful()) {
-                            try {
-                                String test = response.body().string();
-                                Log.d("wanjya", "onResponse: "+test);
-                                token = test;
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                            Toast.makeText(mContext, "Berhasil Login", Toast.LENGTH_SHORT).show();
-                            loading.dismiss();
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putBoolean(SESSION_STATUS, true);
-                            editor.putInt(String.valueOf(TAG_ADMIN),admin);
-                            editor.putString(TAG_TOKEN,token );
-                            editor.apply();
-                            Intent intent = new Intent(mContext, MainActivity.class);
-                            startActivity(intent);
-                        } else {
-                            // Jika login gagal
-                            Toast.makeText(mContext, "Error", Toast.LENGTH_SHORT).show();
-                            loading.dismiss();
-                        }
-                    }
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Log.e("debug", "onFailure: ERROR > " + t.toString());
-                        loading.dismiss();
-                    }
-
-                });
-
-    }
-
     private void Login() {
             mApiService.loginRequest(email.getText().toString(), password.getText().toString())
                     .enqueue(new Callback<ResponseBody>() {
@@ -183,7 +146,7 @@ public class Login extends AppCompatActivity {
                                             editor.putInt(String.valueOf(TAG_ID), jsonRESULTS.getJSONObject("user").getInt("id"));
                                             editor.apply();
                                             Toast.makeText(mContext, "ID ANDA " + id, Toast.LENGTH_SHORT).show();
-                                            Intent intent = new Intent(mContext, MainActivity.class);
+                                            Intent intent = new Intent(mContext, Menu.class);
                                             startActivity(intent);
                                             finish();
                                         }else {

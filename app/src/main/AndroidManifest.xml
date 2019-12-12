@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Admin.AdminLoginActivity"></activity>
+        <activity
+            android:name=".Menu"
+            android:label="@string/title_activity_menu"></activity>
+        <activity android:name=".Admin.AdminLoginActivity" />
         <activity android:name=".Admin.AdminActivity" />
         <activity android:name=".EditProfile" />
         <activity android:name=".Profile" />
