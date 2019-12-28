@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Produk.ProdukDetail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/image_produk"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:src="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/kode_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kode : "
+                android:textSize="25sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/harga_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga : "
+                android:textSize="25sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/kategori_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kategori : "
+                android:textSize="25sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ukuran_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ukuran : "
+                android:textSize="25sp"
+                android:textStyle="bold">
+
+            </TextView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textAlignment="center"
+                >
+                <Button
+
+                    android:id="@+id/btn_pesan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Pesan"
+                    android:background="@drawable/buttonstylekecil">
+                </Button>
+
+                <Button
+
+                    android:layout_toRightOf="@+id/btn_pesan"
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Kembali"
+                    android:background="@drawable/buttonstylekecil">
+
+                </Button>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

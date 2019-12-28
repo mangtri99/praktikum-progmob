@@ -10,13 +10,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.notifications.EditPassword"></activity>
+        <activity android:name=".ui.notifications.ProfileDetail" />
+        <activity android:name=".Produk.Pemesanan" />
+        <activity android:name=".Produk.ProdukDetail" />
         <activity
             android:name=".Menu"
-            android:label="@string/title_activity_menu"></activity>
+            android:label="@string/title_activity_menu" />
         <activity android:name=".Admin.AdminLoginActivity" />
         <activity android:name=".Admin.AdminActivity" />
-        <activity android:name=".EditProfile" />
         <activity android:name=".Profile" />
         <activity
             android:name=".Register"

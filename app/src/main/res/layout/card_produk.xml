@@ -16,11 +16,12 @@
 
         <ImageView
             android:layout_width="wrap_content"
+            android:id="@+id/image"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
             android:cropToPadding="true"
-            android:maxWidth="70dp"
+            android:maxWidth="100dp"
             android:layout_margin="10dp"
             android:src="@drawable/android_developer" />
 
@@ -34,10 +35,10 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/kampus"
+            android:id="@+id/kode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Android Developer"
+            android:text="Kode Produk = A101"
             android:layout_toEndOf="@id/card1"
             android:textColor="@color/miniTitle"
             android:textSize="17sp"
@@ -46,11 +47,35 @@
             tools:ignore="NotSibling" />
 
         <TextView
-            android:layout_below="@id/kampus"
-            android:id="@+id/alamat"
+            android:layout_below="@id/kode"
+            android:id="@+id/ukuran"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Explore the power of android \napplication development"
+            android:text="Ukuran : 3 x 2m"
+            android:textColor="@color/miniDescription"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:maxLines="3"
+            android:layout_marginBottom="10dp"
+            />
+        <TextView
+            android:layout_below="@id/ukuran"
+            android:id="@+id/harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harga : Rp.500.000"
+            android:textColor="@color/miniDescription"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:maxLines="3"
+            android:layout_marginBottom="10dp"
+            />
+        <TextView
+            android:layout_below="@id/harga"
+            android:id="@+id/kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kategori : Pernikahan"
             android:textColor="@color/miniDescription"
             android:textSize="15sp"
             android:textStyle="normal"

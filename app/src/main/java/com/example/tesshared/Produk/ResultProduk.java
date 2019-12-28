@@ -16,7 +16,8 @@ public class ResultProduk {
     @SerializedName("harga")
     @Expose
     private int harga;
-
+    private String kategori;
+    private String image;
 
 
     public  String getKode(){
@@ -47,5 +48,21 @@ public class ResultProduk {
 
     public void setHarga(int harga) {
         this.harga = harga;
+    }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

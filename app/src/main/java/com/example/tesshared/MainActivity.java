@@ -44,21 +44,21 @@ public class MainActivity extends AppCompatActivity {
         /* Men-set Status dan User yang sedang login menjadi default atau kosong di
          * Data Preferences. Kemudian menuju ke LoginActivity*/
 
-        btn_logout= (Button) findViewById(R.id.btn_logout);
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Menghapus Status login dan kembali ke Login Activity
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.remove(SESSION_STATUS);
-                editor.remove(TAG_TOKEN);
-                editor.remove(String.valueOf(TAG_ID));
-                editor.remove(String.valueOf(TAG_ADMIN));
-                editor.apply();
-                startActivity(new Intent(getBaseContext(),Login.class));
-                finish();
-            }
-        });
+//        btn_logout= (Button) findViewById(R.id.btn_logout);
+//        btn_logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Menghapus Status login dan kembali ke Login Activity
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+//                editor.remove(SESSION_STATUS);
+//                editor.remove(TAG_TOKEN);
+//                editor.remove(String.valueOf(TAG_ID));
+//                editor.remove(String.valueOf(TAG_ADMIN));
+//                editor.apply();
+//                startActivity(new Intent(getBaseContext(),Login.class));
+//                finish();
+//            }
+//        });
     }
     private void initComponents() {
         result_name = (TextView) findViewById(R.id.result_name);
